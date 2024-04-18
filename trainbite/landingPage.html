@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrainBites</title>
+<link rel="stylesheet" href="landingpg.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script>
+  function p(){
+    var tr=document.getElementById('ff').value;
+    var dt=document.getElementById('myDate').value;
+    alert(dt);
+    localStorage.setItem("dt",dt);
+    localStorage.setItem("train_no",tr);
+    return false;
+  }
+  function pp(){
+    // var tr=document.getElementById('ff').value;
+    localStorage.setItem("no",19038);
+    return false;
+  }
+</script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="landingPage.html">TrainBites</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+
+    </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid" style="background-color: orange;">
+    <div class="container">
+      <h1>Order Delicious Food on Trains Online </h1>
+      <h3>Order via PNR no.</h3>
+      <!-- <div class="input-group col-md-6">
+                <input type="text" class="form-control" placeholder="Enter 10 Digit PNR No." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-danger" type="button">ORDER</button>
+                </div>
+              </div> -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+            role="tab" aria-controls="Order Via PNR" aria-selected="true">Order Via PNR</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+            role="tab" aria-controls="Order via Train No." aria-selected="false">Order via Train No.</button>
+        </li>
+
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" style="margin: 10px"; role=" tabpanel="aria-labelledby="home-tab">
+          <form action="station.html">
+          <div class="input-group col-md-6">
+            <input type="text" class="form-control" placeholder="Enter 10 Digit PNR No."
+              aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-danger" onclick="pp();" type="submit">ORDER</button>
+            </div>
+          </div>
+          </form>
+        </div>
+        
+        <div class="tab-pane fade" id="profile" style="margin: 10px;" role="tabpanel" aria-labelledby="profile-tab">
+          <form action="station.html">
+          <div class="input-group col-md-6">
+            
+            <input type="text"  id="ff" class="form-control" placeholder="Enter Train No." aria-label="Recipient's username"
+              aria-describedby="basic-addon2">
+            &nbsp
+            <input type="date" class="form-control" placeholder="Boarding date"
+              aria-label="Example text with button addon" aria-describedby="button-addon1" id="myDate">
+          </div>
+          <button class="btn btn-danger" onclick="p();" type="submit" style="margin-left: 15px;">ORDER</button>
+        </form>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+  <div class="p-5 text-center bg-image rounded-3"
+    style="background-image: url('https://futuredish.com/wp-content/uploads/2020/06/Mala-Xiang-Guo_FeaturedImage-1024x575.jpg');height: 400px;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="footer bg-dark">&copy;<span id="year"> </span><span> Train Bites. All rights reserved.</span></div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
